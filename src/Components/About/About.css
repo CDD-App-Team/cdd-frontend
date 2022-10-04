@@ -1,0 +1,36 @@
+.About form {
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    background: lavender;
+    display: grid;
+    width:400px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.About h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px;
+}
+
+.About form input, select, label, legend {
+    margin: 10px;
+}
+
+.About form button {
+    width: 100px;
+    border-radius: var(--border-radius);
+    background-color: var(--white-color);
+    padding: 10px;
+    margin: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+.About form button:hover {
+    background-color: rgb(201, 201, 227);
+}

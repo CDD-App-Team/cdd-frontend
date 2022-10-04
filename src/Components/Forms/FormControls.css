@@ -1,0 +1,58 @@
+.FormControl div {
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    background: lavender;
+    display: grid;
+    width:400px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.FormControl .Required::after {
+    content: '*';
+    color: red;
+}
+
+.LabelText {
+    color: var(--caption-color);
+    font-family: var(--label-font);
+    font-size: 0.9em;
+}
+
+.FormControl form {
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    background: lavender;
+    display: grid;
+    width:400px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.FormControl h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px;
+}
+
+.FormControl form input, select, label, legend {
+    margin: 10px;
+}
+
+.FormControl form button {
+    width: 100px;
+    border-radius: var(--border-radius);
+    background-color: var(--white-color);
+    padding: 10px;
+    margin: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+.FormControl form button:hover {
+    background-color: rgb(201, 201, 227);
+}

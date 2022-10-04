@@ -1,0 +1,16 @@
+.Header {
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+  padding-right: var(--padding);
+  height: var(--header-height);
+
+  background-color: var(--white-color);
+  color: var(--black-color);
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 20px;
+  align-items: center;
+  box-shadow: var(--box-shadow);
+}

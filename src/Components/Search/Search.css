@@ -1,0 +1,46 @@
+.SearchResults {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.SearchResults h1 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.SearchResultCard {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    background-color: rgba(173, 216, 230, 0.384);
+    border-radius: 5px;
+    padding: var(--padding);
+}
+
+.SearchResultCard img {
+    width: 100px;
+    margin: 10px;
+}
+
+.SearchResultCard img:hover {
+    opacity: 80%;
+    border: 1px solid rgb(207, 207, 207);
+    border-radius: 5px;
+    content: 'hello';
+}
+
+.Search form button {
+    width: 100px;
+    border-radius: var(--border-radius);
+    background-color: var(--white-color);
+    padding: 10px;
+    margin: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+.Search form button:hover {
+    background-color: rgb(201, 201, 227);
+}
