@@ -9,8 +9,10 @@ import styles from './AuthForm.css';
 export default function AuthForm({ mode = 'signin' }) {
   const { signUp, signIn, error } = useAuth();
   const [credentials, handleChange] = useForm({
+    firstName: '',
+    lastName: '',
     email: '',
-    password: '',
+    passwordH: '',
   });
 
   const handleSubmit = async (e) => {
@@ -44,6 +46,24 @@ export default function AuthForm({ mode = 'signin' }) {
   return (
     <form className={styles.AuthForm} onSubmit={handleSubmit}>
       <h2>{type.prompt}</h2>
+
+      <InputControl
+        label="First Name"
+        name="firstName"
+        type="text"
+        required
+        value={credentials.firstName}
+        onChange={handleChange}
+      />
+
+      <InputControl
+        label="Last Name"
+        name="lastName"
+        type="text"
+        required
+        value={credentials.lastName}
+        onChange={handleChange}
+      />
 
       <InputControl
         label="Email"

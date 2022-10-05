@@ -1,15 +1,15 @@
 import { del, get, post } from './request.js';
 
-const URL = '/api/v1/auth';
+const URL = '/api/v1/users';
 
 export async function signUpUser(credentials) {
-  const response = await post(`${URL}/signup`, credentials);
+  const response = await post(`${URL}`, credentials);
   response.user = response.data;
   return response;
 }
 
 export async function signInUser(credentials) {
-  const response = await post(`${URL}/signin`, credentials);
+  const response = await post(`${URL}/sessions`, credentials);
   response.user = response.data;
   return response;
 }
@@ -20,7 +20,7 @@ export async function signOutUser() {
 }
 
 export async function verifyUser() {
-  const response = await get(`${URL}/verify`);
+  const response = await get(`${URL}/me`);
   response.user = response.data;
   return response;
 }
