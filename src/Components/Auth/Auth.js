@@ -1,12 +1,11 @@
 import { Navigate, Outlet } from 'react-router-dom';
+import { useUser } from '../../state/UserContext.js';
 import styles from './Auth.css';
-// import { useUser } from '../../state/UserContext.jsx';
 
 export default function Auth() {
-  // const user = useUser();
+  const user = useUser();
 
-  // TODO: handle clever redirect to page that got us here
-  // if (user) return <Navigate to="/" />;
+  if (user) return <Navigate to="/" />;
 
   return (
     <main className={styles.Auth}>
