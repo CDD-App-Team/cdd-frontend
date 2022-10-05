@@ -12,7 +12,7 @@ export default function AuthForm({ mode = 'signin' }) {
     firstName: '',
     lastName: '',
     email: '',
-    passwordH: '',
+    password: '',
   });
 
   const handleSubmit = async (e) => {

@@ -1,21 +1,21 @@
 import { del, get, post } from './request.js';
 
-const URL = '/api/v1/users';
+const URL = 'http://localhost:7890';
 
 export async function signUpUser(credentials) {
-  const response = await post(`${URL}`, credentials);
+  const response = await post(`${URL}/api/v1/users`, credentials);
   response.user = response.data;
   return response;
 }
 
 export async function signInUser(credentials) {
-  const response = await post(`${URL}/sessions`, credentials);
+  const response = await post(`${URL}/api/v1/users/sessions`, credentials);
   response.user = response.data;
   return response;
 }
 
 export async function signOutUser() {
-  const response = await del(`${URL}/signout`);
+  const response = await del(`${URL}/api/v1/users/sessions`);
   return response;
 }
 
