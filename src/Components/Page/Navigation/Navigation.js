@@ -8,6 +8,7 @@ export default function Navigation() {
       <NavLink to="about">About</NavLink>
       <NavLink to="projects">Projects</NavLink>
       <NavLink to="search">Search Zeldex</NavLink>
+      <NavLink to="auth">Auth</NavLink>
     </nav>
   );
 }
