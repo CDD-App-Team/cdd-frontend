@@ -7,15 +7,12 @@ import {
 
 import Layout from './Page/Layout';
 import HomePage from './HomePage/HomePage';
-import About from './About/About';
-import Projects from './Projects/Projects';
-import BooBot from './Projects/BooBot';
-import Printstagram from './Projects/Printstagram/Printstagram';
-import VSssnake from './Projects/VSssnake/VSssnake';
-import Search from './Search/Search';
 import Auth from './Auth/Auth.js';
 import AuthForm from './Auth/AuthForm.js';
 import UserProvider from '../state/UserContext.js';
+import ProtectedRoute from './Auth/ProtectedRoute.js';
+import Lists from './Lists/Lists.js';
+import ListsProvider from '../state/ListsContext.js';
 
 export default function App() {
   return (
@@ -30,20 +27,18 @@ export default function App() {
             />
           </Route>
 
-          <Route element={<Layout />}>
-            <Route index element={<HomePage />} />
+          <Route element={<ProtectedRoute />}>
+            <Route element={<Layout />}>
+              <Route index element={<HomePage />} />
 
-            <Route path="about" element={<About />} />
+              <Route element={<ListsProvider />}>
+                <Route path="lists">
+                  <Route index element={<Lists />} />
+                </Route>
+              </Route>
 
-            <Route path="search" element={<Search />} />
-
-            <Route path="projects" element={<Projects />}>
-              <Route index element={<BooBot />} />
-              <Route path="printstagram" element={<Printstagram />} />
-              <Route path="vsssnake" element={<VSssnake />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
             </Route>
-
-            <Route path="*" element={<Navigate to="/" replace />} />
           </Route>
         </Routes>
       </UserProvider>
