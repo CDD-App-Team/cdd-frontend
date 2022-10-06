@@ -5,7 +5,9 @@ import { del, get, post } from './request.js';
 const URL = 'http://localhost:7890';
 
 export async function signUpUser(credentials) {
-  const response = await post(`${URL}/api/v1/users`, credentials);
+  const response = await 
+  post(`${URL}/api/v1/users`, credentials);
+  post(`${URL}/api/v1/users/sessions`, credentials);
   response.user = response.data;
   return response;
 }

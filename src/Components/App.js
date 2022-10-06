@@ -11,7 +11,7 @@ import Auth from './Auth/Auth.js';
 import AuthForm from './Auth/AuthForm.js';
 import UserProvider from '../state/UserContext.js';
 import ProtectedRoute from './Auth/ProtectedRoute.js';
-import Lists from './Lists/Lists.js';
+import { Tasks } from './Tasks/Tasks.js';
 import ListsProvider from '../state/ListsContext.js';
 
 export default function App() {
@@ -30,16 +30,16 @@ export default function App() {
           <Route element={<ProtectedRoute />}>
             <Route element={<Layout />}>
               <Route index element={<HomePage />} />
-
               <Route element={<ListsProvider />}>
-                <Route path="lists">
-                  <Route index element={<Lists />} />
-                </Route>
+                <Route 
+                  path="lists" 
+                  element = {<Tasks/>}
+                />
               </Route>
-
-              <Route path="*" element={<Navigate to="/" replace />} />
             </Route>
           </Route>
+
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </UserProvider>
     </Router>

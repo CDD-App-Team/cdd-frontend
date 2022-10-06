@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FormButton, InputControl } from './FormControls.js';
+import { FormButton, InputControl } from '../Forms/FormControls';
 import styles from './AddForm.css';
 
 // eslint-disable-next-line react/prop-types
