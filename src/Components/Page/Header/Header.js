@@ -4,10 +4,14 @@ import { signOutUser } from '../../../services/auth';
 
 export default function Header() {
 
+  function handleSignout(){
+    signOutUser();
+    location.replace('/auth');
+  }
   
   return (
     <header className={styles.Header}>
-      <button onClick={signOutUser}>log out</button>
+      <button onClick={handleSignout}>log out</button>
       <div className={styles.NavigationContainer}>
         <Navigation/>
       </div>
