@@ -1,4 +1,6 @@
 import { del, get, post } from './request.js';
+// const bcrypt = require('bcrypt');
+// const jwt = require('jsonwebtoken');
 
 const URL = 'http://localhost:7890';
 
@@ -20,7 +22,7 @@ export async function signOutUser() {
 }
 
 export async function verifyUser() {
-  const response = await get(`${URL}/api/v1/users/sessions`);
+  const response = await get(`${URL}/api/v1/users/protected`);
   response.user = response.data;
   return response;
 }
