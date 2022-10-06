@@ -5,7 +5,6 @@ import {
   Navigate,
 } from 'react-router-dom';
 
-
 import Layout from './Page/Layout';
 import HomePage from './HomePage/HomePage';
 import Auth from './Auth/Auth.js';
