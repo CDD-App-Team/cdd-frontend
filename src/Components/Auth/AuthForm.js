@@ -18,6 +18,7 @@ export default function AuthForm({ mode = 'signin' }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await type.action(credentials);
+    console.log(credentials);
   };
 
   const signin = {

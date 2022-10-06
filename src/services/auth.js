@@ -20,7 +20,7 @@ export async function signOutUser() {
 }
 
 export async function verifyUser() {
-  const response = await get(`${URL}/me`);
+  const response = await get(`${URL}/api/v1/users/sessions`);
   response.user = response.data;
   return response;
 }
