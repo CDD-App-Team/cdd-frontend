@@ -1,15 +1,11 @@
-import { useForm } from '../Forms/useForm.js';
+// import { useForm } from '../Forms/useForm.js';
+
 import { FormButton, InputControl } from '../Forms/FormControls.js';
-import styles from './ItemForm.css';
+import styles from './TaskForm.css';
 
-
-const initialData = {
-  description: ''
-};
 
 // eslint-disable-next-line react/prop-types
 export default function TaskForm({ onAdd }) {
-  const [data, handleChange, reset] = useForm(initialData);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,12 +18,12 @@ export default function TaskForm({ onAdd }) {
   return (
     <div>
       <h2>To Do List</h2>
-      <form className={styles.ItemForm} onSubmit={handleSubmit}>
+      <form className={styles.TaskForm} onSubmit={handleSubmit}>
         <InputControl
           label="Description"
           name="description"
           required
-          placeholder="new item"
+          placeholder="new task"
           value={data.description}
           onChange={handleChange}
         />

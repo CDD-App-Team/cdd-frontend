@@ -1,14 +1,13 @@
 import { useParams } from 'react-router-dom';
-import { useList } from '../../state/ListsContext.js';
 import TaskForm from './TaskForm';
 
 // eslint-disable-next-line react/prop-types
 export function Tasks() {
   const { id } = useParams();
-  const { addItem } = useList(id);
+  const { addTask } = useTask(id);
   
-  const handleAdd = async (item) => {
-    await addItem(item);
+  const handleAdd = async (task) => {
+    await addTask(task);
   };
 
   return (

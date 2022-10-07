@@ -12,7 +12,7 @@ import AuthForm from './Auth/AuthForm.js';
 import UserProvider from '../state/UserContext.js';
 import ProtectedRoute from './Auth/ProtectedRoute.js';
 import { Tasks } from './Tasks/Tasks.js';
-import ListsProvider from '../state/ListsContext.js';
+import TaskProvider from '../state/TaskContext.js';
 
 export default function App() {
   return (
@@ -30,9 +30,9 @@ export default function App() {
           <Route element={<ProtectedRoute />}>
             <Route element={<Layout />}>
               <Route index element={<HomePage />} />
-              <Route element={<ListsProvider />}>
+              <Route element={<TaskProvider />}>
                 <Route 
-                  path="tasks/:id"
+                  path="tasks" 
                   element = {<Tasks/>}
                 />
               </Route>
