@@ -24,14 +24,15 @@ export default function TaskProvider({ children }) {
     handleAddTask
   };
 
-  useEffect(() => {
-    //create async function to fetch all tasks using getTasks()
-    const fetchTasks = async () => {
-      const tasks = await getTasks();
-      setTasks(tasks);
-    };
-    fetchTasks();
-  }, []);
+  // useEffect(() => {
+  //   //create async function to fetch all tasks using getTasks()
+  //   const fetchTasks = async () => {
+  //     const response = await getTasks();
+  //     //maybe response.JSON? \/
+  //     setTasks(response);
+  //   };
+  //   fetchTasks();
+  // }, []);
 
   // function clearForm() {
   //   setNewContent('');
