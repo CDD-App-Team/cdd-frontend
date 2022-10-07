@@ -95,6 +95,7 @@ export function useList(id) {
   const { listsById, updateList } = useContext(ListsContext);
   const [error, setError] = useState(null);
   const list = listsById[id];
+  console.log('list', list);
 
   const addItem = async (item) => {
     const { data, error } = await createListItem(id, item);

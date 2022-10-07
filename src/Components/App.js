@@ -32,7 +32,7 @@ export default function App() {
               <Route index element={<HomePage />} />
               <Route element={<ListsProvider />}>
                 <Route 
-                  path="lists" 
+                  path="tasks/:id"
                   element = {<Tasks/>}
                 />
               </Route>

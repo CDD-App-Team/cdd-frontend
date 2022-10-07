@@ -5,7 +5,7 @@ export default function Navigation() {
   return (
     <nav className={styles.Navigation}>
       <NavLink to="">Home</NavLink>
-      <NavLink to="lists">Lists</NavLink>
+      <NavLink to="tasks">Lists</NavLink>
     </nav>
   );
 }
