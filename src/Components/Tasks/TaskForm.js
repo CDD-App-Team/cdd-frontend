@@ -7,11 +7,22 @@ import { useTaskContext } from '../../state/TaskContext';
 // eslint-disable-next-line react/prop-types
 export default function TaskForm() {
 
-  const { handleAddTask, newContent, setNewContent } = useTaskContext();
+  const { 
+    handleAddTask, 
+    newContent, 
+    setNewContent 
+  } = useTaskContext();
+
+  const handleAdd = async (description) => {
+    await handleAddTask({ description, completed: false });
+  };
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    handleAddTask();
+    await handleAdd(newContent);
+    console.log(newContent);
+    setNewContent('');
   };
 
   return (

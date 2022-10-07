@@ -33,15 +33,16 @@ export default function TaskProvider({ children }) {
     fetchTasks();
   }, []);
 
-  function clearForm() {
-    setNewContent('');
-  }
+  // function clearForm() {
+  //   setNewContent('');
+  // }
+  // console.log(newContent);
+  // const newTasks = tasks.concat([addedTask]);
+  // setTasks(newTasks);
 
   async function handleAddTask(newContent){
-    const addedTask = await createNewTask(newContent);
-    const newTasks = tasks.concat([addedTask]);
-    setTasks(newTasks);
-    clearForm();
+    const { data } = await createNewTask(newContent);
+    return setTasks((tasks) => [...tasks, data]);
   }
 
   return (
