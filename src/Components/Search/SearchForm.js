@@ -2,7 +2,7 @@
 import { 
   InputControl, 
   FormButton,
-SelectControl
+  SelectControl
 } from '../Forms/FormControls.js';
 import useSearchForm from '../../hooks/use-search-form.js';
 import styles from './Search.css';

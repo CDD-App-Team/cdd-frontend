@@ -14,3 +14,16 @@
   align-items: center;
   box-shadow: var(--box-shadow);
 }
+
+button {
+  width: 100px;
+  border-radius: var(--border-radius);
+  background-color: var(--white-color);
+  padding: 10px;
+  margin: 10px;
+  box-shadow: var(--box-shadow);
+}
+
+button:hover {
+  background-color: rgb(201, 201, 227);
+}
