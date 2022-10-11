@@ -2,7 +2,7 @@ import { del, get, post } from './request.js';
 // const bcrypt = require('bcrypt');
 // const jwt = require('jsonwebtoken');
 
-const URL = 'http://localhost:7890';
+const URL = 'https://cdd-backend.herokuapp.com';
 
 export async function signUpUser(credentials) {
   const response = await 

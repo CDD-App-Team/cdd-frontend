@@ -24,6 +24,9 @@ module.exports = {
   devServer: {
     port: 3000,
     historyApiFallback: true,
+    proxy: {
+      '/api': 'https://lighthearted-malasada-501c15.netlify.app',
+    },
   },
   plugins: [
     new HtmlPlugin({ template: './src/index.html' }),
